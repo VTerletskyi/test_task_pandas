@@ -19,7 +19,7 @@ class DrawingPlots:
     def draw_plots(self):
         self.download_json()
 
-        df = pd.read_json("data_from_s3.json")
+        df = pd.read_json("s3/data_from_s3.json")
 
         # Checking the correctness of the count corners
         df["right_count_cor"] = df["gt_corners"] == df["rb_corners"]
